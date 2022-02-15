@@ -1,0 +1,18 @@
+.shadow-box-example {
+    height: 120px;
+    width: 100%;
+    background-color: white;
+    margin-left: 35%;
+    margin-top: 15%;
+}
+
+.name-icon{
+    margin-left: 12%;
+    margin-right: 3%;
+    margin-top: 0.8vh;
+}
+
+.card-img{
+    height: 50%;
+}
+

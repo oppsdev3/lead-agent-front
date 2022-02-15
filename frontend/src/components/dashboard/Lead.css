@@ -1,0 +1,21 @@
+.leads{
+    width: 87%;
+    height: 50%;
+    background-color: lightblue;
+    color: black;
+    margin-left: 10%;
+    margin-right: 50%;
+}
+
+.top-row{
+    background-color: lightblue;
+    width: 80%;
+    margin-left: 18%;
+    margin-top: 5%;
+}
+
+.body-row{
+    width: 80%;
+    margin-left: 18%;
+    margin-top: 5%;
+}
