@@ -10,6 +10,10 @@ const Lead =() => {
 
     const [agentData, setAgentData] = useState();
 
+    const handleOnView = () => {
+        navigate('/leadstatus');
+    }
+
     const callLeads = async() => {
         try{
             const res = await fetch('/leads', {
@@ -94,7 +98,7 @@ const Lead =() => {
                                     <h6>{agent.notes}</h6>
                                 </div>
                                 <div className={'col'}>
-                                    <button> view </button>
+                                    <button onClick={handleOnView}> view </button>
                                 </div>
                             </div>
                         </div>
