@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './Lead.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Report =() => {
 

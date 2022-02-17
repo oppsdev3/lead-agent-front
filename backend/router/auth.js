@@ -129,6 +129,49 @@ router.post('/leadstatus',  async (req,res) => {
 });
 
 
+//update leads
+router.put('/leads/postleadstatus/:id',  async (req,res) => {
+    console.log("id:", req.params.id);
+
+
+    await LeadStatus.findByIdAndUpdate({ _id: req.params.id }, {
+        $set:{
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            phonenumber: req.body.phonenumber,
+            interestedcourse: req.body.interestedcourse,
+            collegename: req.body.collegename,
+            status: req.body.status,
+            date: req.body.date,
+            time: req.body.time,
+            note: req.body.note
+        }
+    })
+    .then((agent) => {
+        console.log("updated");
+        return res.status(200).json({
+            // updated_agent: agent,
+            message: "Updated successfully."
+        })
+        // .send(agent);
+    })
+    .catch((error) => {
+        console.log("update failed");
+        console.log(error);
+        return res.status(500)
+        // .send(error);
+    })
+
+
+
+});
+
+
+
+
+
+
 
 //leads
 
@@ -142,6 +185,18 @@ router.get('/leads', (req, res) => {
 
 })
 
+
+
+router.get('/leads/leadstatus/:id', (req, res) => {
+
+    LeadStatus.findById(req.params.id).then((agent) => {
+        res.send(agent);
+        console.log("agent: ",agent);
+    }).catch((error) => {
+        res.status(500).send(error);
+    })
+
+})
 
 router.get('/reports', (req, res) => {
 

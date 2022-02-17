@@ -2,14 +2,16 @@
 @import url("https://cdn.syncfusion.com/ej2/material.css");
 
 .container{
-    background-color: lightblue;
+    /* background-color: lightblue; */
     margin-left: 20%;
     margin-right: 20%;
 }
 
 .ls-top-section{
-    margin-left: -55%;
-    margin-top: 2vh;
+    margin-left: -10%;
+    margin-top: 5%;
+    margin-bottom: 9%;
+    width: 90%;
 }
 
 .topbar{
@@ -26,3 +28,28 @@
     width: 70%;
 }
 
+.status-body-container{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 60%;
+    margin-top: 10%;
+}
+
+.pls-top-section{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+.pls-status-body-container{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 60%;
+    margin-top: 5%;
+}
+
+.pls-head{
+    margin-top: 2%;
+}

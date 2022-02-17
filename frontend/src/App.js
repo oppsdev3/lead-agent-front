@@ -14,6 +14,8 @@ import Lead from "./components/dashboard/Lead";
 import LeadStatus from "./components/dashboard/LeadStatus";
 import Report from "./components/dashboard/Report";
 import Profile from "./components/dashboard/Profile";
+import LeadStatusDetails from './components/dashboard/LeadStatusDetails';
+import PostLeadStatusDetails from './components/dashboard/PostLeadStatusDetails';
 import React, {useState} from "react";
 
 
@@ -38,6 +40,8 @@ function App() {
 
             <Route path={'/leads'} element={<Lead /> }/>
             <Route path={'/leadstatus'} element={<LeadStatus /> }/>
+            <Route path={'/leads/leadstatus/:id'} element={<LeadStatusDetails /> }/>
+            <Route path={'/leads/postleadstatus/:id'} element={<PostLeadStatusDetails /> }/>
             <Route path={'/reports'} element={<Report /> }/>
             <Route path={'/profiles'} element={<Profile /> }/>
         </Routes>

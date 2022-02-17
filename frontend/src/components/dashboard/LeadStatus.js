@@ -61,14 +61,14 @@ const LeadStatus =() => {
                     <div className={'topbar'}>
                         <div className={"col"}>
                             <i className="zmdi zmdi-account-circle" style={{color: "bisque", fontSize: "1.8rem", marginRight: '40%'}}>  </i>
-                            <p style={{  fontSize: "1rem", marginLeft: "20%" , width: "10vw", marginTop: "-3.5vh" }}> &nbsp;&nbsp; &nbsp; Lead Status&nbsp; -  </p>
+                            <p style={{  fontSize: "1rem", marginLeft: "20%" , width: "10vw", marginTop: "-2.9vh" }}> &nbsp;&nbsp; &nbsp; Lead Status&nbsp; -  </p>
                         </div>
                     <div className={"col"}>
-                        <text style={{ display:"flex", color: "darkblue" , width: "10vw",  fontSize: "0.8rem", marginLeft: "8%", marginTop: "0.5vh" }}> Need to call </text>  {/*add status dynamically {status} from backend*/}
+                        <p style={{ display:"flex", color: "darkblue" , width: "10vw",  fontSize: "0.8rem", marginLeft: "8%", marginTop: "0.5vh" }}> Need to call </p>  {/*add status dynamically {status} from backend*/}
                     </div>
 
                     <div className={"col"}>
-                        <button className={'btn-secondary'} style={{ borderRadius: "12%", padding: "0.3%", marginLeft: "850%"}} onClick={PostData}> Update </button>
+                        <button className={'btn-secondary'} style={{ backgroundColor: "green", borderRadius: "12%", padding: "5%", width:"180%", marginLeft: "850%"}} onClick={PostData}> Post </button>
                     </div>
                     </div>
                 </div>

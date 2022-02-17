@@ -98,7 +98,9 @@ const Lead =() => {
                                     <h6>{agent.notes}</h6>
                                 </div>
                                 <div className={'col'}>
-                                    <button onClick={handleOnView}> view </button>
+                                    <button onClick={() => {
+                                        navigate(`leadstatus/${agent._id}`)
+                                    }}> view </button>
                                 </div>
                             </div>
                         </div>
