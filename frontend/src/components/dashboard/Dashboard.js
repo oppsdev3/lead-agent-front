@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './Dashboard.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import MenuItem from "./MenuItem";
 
 

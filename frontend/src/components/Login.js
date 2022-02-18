@@ -29,6 +29,7 @@ const Login =() => {
             window.alert("Login failed");
         } else {
             window.alert("Login successful");
+            console.log("Agent data: ", data);
             navigate('/home');
         }
     }

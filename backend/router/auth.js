@@ -9,6 +9,8 @@ const url = 'mongodb://localhost:27017/leadmanagementAgent';
 
 const mongo = require('mongodb');
 const assert = require('assert');
+//const yourdate = require('dateformat');
+//var dateFormat = require('dateformat');
 
 
 require('../db/conn');
@@ -185,7 +187,15 @@ router.get('/leads', (req, res) => {
 
 })
 
+router.get('/leadsMenu', (req, res) => {
 
+    LeadStatus.find({}).then((agent) => {
+        res.send(agent);
+    }).catch((error) => {
+        res.status(500).send(error);
+    })
+
+})
 
 router.get('/leads/leadstatus/:id', (req, res) => {
 
@@ -207,6 +217,44 @@ router.get('/reports', (req, res) => {
     })
 
 })
+
+
+
+
+router.get('/reports/:sdate/:edate', (req, res) => {
+
+  
+   const start = req.params.sdate;
+   console.log("start date:", start);
+
+
+   const end = req.params.edate;
+   console.log("end date:", end);
+
+   const startobj = new Date(start);
+   const endobj = new Date(end);
+   
+   const yourStart = startobj.toISOString();
+   const yourEnd = endobj.toISOString();
+   console.log(yourStart);
+   console.log(yourEnd);
+
+
+    LeadStatus.find({
+        name: "date",
+        'date': {
+        $gte: yourStart,
+        $lt: yourEnd
+    }
+    })
+    .then((agent) => {
+        res.send(agent);
+    }).catch((error) => {
+        res.status(500).send(error);
+    })
+
+})
+
 
 
 module.exports = router;

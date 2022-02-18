@@ -47,10 +47,12 @@ app.get('/dashboard', (req, res) => {
     res.send(`DASHBOARD`);
 })
 
-// app.get('/leads', middleware, (req, res) => {
-//     console.log('leads > ');
-//     res.send(`LEADS`);
+// app.get('/leadsMenu', (req, res) => {
+//     console.log('leadsMenu > ');
+//     res.send(`LEADSMENU`);
 // })
+
+
 //
 // app.get('/leadstatus', middleware, (req, res) => {
 //     console.log(`lead status > `);
