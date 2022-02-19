@@ -39,7 +39,7 @@ function App() {
             <Route element={<ErrorPage /> } />
 
             <Route path={'/leads'} element={<Lead /> }/>
-            {/* <Route path={'/leadsMenu'} element={<Home /> }/> */}
+            {/* <Route path={'/leadsMenu'} element={<LeadManager /> }/> */}
             <Route path={'/leadstatus'} element={<LeadStatus /> }/>
             <Route path={'/leads/leadstatus/:id'} element={<LeadStatusDetails /> }/>
             <Route path={'/leads/postleadstatus/:id'} element={<PostLeadStatusDetails /> }/>
